@@ -1,17 +1,57 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Processor</title>
-</head>
-<body>
-    <h1>Prześlij plik audio</h1>
-    <form id="uploadForm">
-        <input type="file" id="audioFile" accept="audio/*" required>
-        <button type="submit">Prześlij</button>
-    </form>
-    <div id="result"></div>
-    <script src="/static/main.js"></script>
-</body>
-</html>
+<h2>Prześlij plik audio</h2>
+<form id="uploadForm">
+    <input type="file" id="audioFile" accept="audio/*" required>
+    <button type="submit">Prześlij</button>
+</form>
+
+<br />
+
+<h2>Nagraj swój plik</h2>
+
+<label for="devices">Wybierz urządzenie:</label>
+<select id="devices">
+    <option value="">wybierz z poniższych</option>
+</select>
+
+<br />
+<br />
+
+<label for="channels">Wybierz opcje kanału:</label>
+<select name="channel" id="channels">
+    <option value="mono">Mono</option>
+    <option value="stereo">Stereo</option>
+</select>
+
+<br />
+<br />
+
+<label for="samplingrates">Wybierz częstotliwość próbkowania:</label>
+<select name="samplingratel" id="samplingrates">
+    <option value="op8000">8000 Hz</option>
+    <option value="op16000">16000 Hz</option>
+    <option value="op22050">22050 Hz</option>
+    <option value="op32000">32000 Hz</option>
+    <option value="op44100">44100 Hz</option>
+    <option value="op48000">48000 Hz</option>
+</select>
+
+<br />
+<br />
+
+<button type="button" onclick="StartRecording()">Nagraj</button>
+<button type="button" onclick="StopRecording()">Zatrzymaj nagrywanie</button>
+
+<br/>
+
+<button type="button" onclick="SaveRecording()">Pobierz nagranie</button>
+
+<br />
+
+<div id="recording_status"></div>
+
+<br />
+<br />
+
+<h2>Rozpoznana emocja:</h2>
+<div id="result"></div>
+<script src="/static/main.js"></script>

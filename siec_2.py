@@ -9,9 +9,9 @@ from keras.layers import Dense, Dropout, Activation
 
 
 # Ścieżki do plików
-sad_dir = r'C:\Users\gabry\OneDrive\Pulpit\Pwr\emotion_recognitin\sad'
-happy_dir = r'C:/Users/gabry/OneDrive\Pulpit\Pwr\emotion_recognitin\happy'
-test_dir = r'C:\Users\gabry\OneDrive\Pulpit\Pwr\emotion_recognitin\test_samples'
+sad_dir = r'C:\Users\hania\OneDrive\Desktop\Recorded\sad'
+happy_dir = r'C:\Users\hania\OneDrive\Desktop\Recorded\happy'
+test_dir = r'C:\Users\hania\OneDrive\Desktop\Recorded\test_samples'
 
 # Utwórz folder test_samples, jeśli nie istnieje
 os.makedirs(test_dir, exist_ok=True)

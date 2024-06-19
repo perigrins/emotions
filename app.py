@@ -12,7 +12,7 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('new.html')
 
 
 @app.route('/upload', methods=['POST'])
